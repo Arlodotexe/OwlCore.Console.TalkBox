@@ -1,4 +1,4 @@
-# OwlCore.Template [![Version](https://img.shields.io/nuget/v/OwlCore.Template.svg)](https://www.nuget.org/packages/OwlCore.Template)
+# OwlCore.Console.TalkBox [![Version](https://img.shields.io/nuget/v/OwlCore.Console.TalkBox.svg)](https://www.nuget.org/packages/OwlCore.Console.TalkBox)
 
 Description goes here.
 
@@ -13,13 +13,13 @@ Extended description goes here. Tell people why they should use your module, how
 
 ## Install
 
-Published releases are available on [NuGet](https://www.nuget.org/packages/OwlCore.Template). To install, run the following command in the [Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console).
+Published releases are available on [NuGet](https://www.nuget.org/packages/OwlCore.Console.TalkBox). To install, run the following command in the [Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console).
 
-    PM> Install-Package OwlCore.Template
+    PM> Install-Package OwlCore.Console.TalkBox
     
 Or using [dotnet](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet)
 
-    > dotnet add package OwlCore.Template
+    > dotnet add package OwlCore.Console.TalkBox
 
 ## Usage
 

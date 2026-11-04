@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\OwlCore.Template.csproj" />
+    <ProjectReference Include="..\src\OwlCore.Console.TalkBox.csproj" />
   </ItemGroup>
 
 </Project>
