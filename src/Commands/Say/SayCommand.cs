@@ -32,7 +32,7 @@ public class SayCommand : Command
             DefaultValueFactory = _ => null
         };
 
-        var textFilePathOption = new Option<string?>("--file")
+        var textFilePathOption = new Option<string?>("--textFile")
         {
             DefaultValueFactory = _ => null,
             Description = "The path to a text file to synthesize."
