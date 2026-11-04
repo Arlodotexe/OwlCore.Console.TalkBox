@@ -1,30 +1,55 @@
-# OwlCore.Console.TalkBox [![Version](https://img.shields.io/nuget/v/OwlCore.Console.TalkBox.svg)](https://www.nuget.org/packages/OwlCore.Console.TalkBox)
+# OwlCore.Console.TalkBox
 
-Description goes here.
-
-Extended description goes here. Tell people why they should use your module, how they can install it, and how they can use it. Documentation takes work!
-
-## 
+A quick and easy console application for common STT and TTS functionality. 
 
 ## Featuring:
-- x
-- y
-- z
+- Listen and transcribe continuously via Whisper.net for STT.
+- Say and speak any text using PiperSharp for TTS.
+- Play any wav file using OwlCore.Storage.OpenAL.
+- Tested working on both Linux and Windows. 
 
 ## Install
 
-Published releases are available on [NuGet](https://www.nuget.org/packages/OwlCore.Console.TalkBox). To install, run the following command in the [Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console).
-
-    PM> Install-Package OwlCore.Console.TalkBox
-    
-Or using [dotnet](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet)
-
-    > dotnet add package OwlCore.Console.TalkBox
+1. Clone the repository
+2. Install dotnet
+3. `dotnet run` in the `src` folder
 
 ## Usage
 
-```cs
-var test = new Thing();
+Continuous STT via Whisper:
+
+```pwsh
+dotnet run listen --inputDevice default
+```
+
+- Leave out the `inputDevice` param to get a list of values. 
+- Combine with `-nolog` and tee/pipe the stdout to append a file.
+
+Speak text once via Piper:
+```pwsh
+dotnet run say --text "testing" --voiceModelKey "en_US-norman-medium" --outputDevice "default"
+```
+- Leave out the `outputDevice` param to get a list of values. 
+- Leave out the `voiceModelKey` param to get a list of values. 
+
+Speak a file:
+```pwsh
+dotnet run say --textFile "I:\pr_draft.txt" --voiceModelKey "en_US-norman-medium" --outputDevice "default"
+```
+
+Speak a line within a file:
+```pwsh
+dotnet run say --textFile "I:\pr_draft.txt#L1" --voiceModelKey "en_US-norman-medium" --outputDevice "default"
+```
+
+Speak a line range within a file:
+```pwsh
+dotnet run say --textFile "I:\pr_draft.txt#L1-L2" --voiceModelKey "en_US-norman-medium" --outputDevice "default"
+```
+
+Speak a line *and* column range within a file:
+```pwsh
+dotnet run say --textFile "I:\pr_draft.txt#L1C1-L1C7" --voiceModelKey "en_US-norman-medium" --outputDevice "default"
 ```
 
 ## Financing
