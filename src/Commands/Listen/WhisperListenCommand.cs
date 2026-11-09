@@ -38,7 +38,7 @@ public class WhisperListenCommand : Command
 
         var modelTypeOption = new Option<GgmlType>("--modelType")
         {
-            DefaultValueFactory = _ => GgmlType.MediumEn,
+            DefaultValueFactory = _ => GgmlType.LargeV3Turbo,
             Description = "The whisper model type to use."
         };
 
