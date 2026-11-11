@@ -169,7 +169,7 @@ public class WhisperListenCommand : Command
             var actualEnd = captureDevice.CaptureStream?.CaptureStartedAt + segment.Data.End;
 
             // Intentionally use stdout instead of diagnostic logger
-            System.Console.WriteLine($"{actualStart:T} to {actualEnd:T}: {segment.Data.Text}");
+            System.Console.WriteLine($"{actualStart:G} to {actualEnd:G}: {segment.Data.Text}");
         }
     }
 }
