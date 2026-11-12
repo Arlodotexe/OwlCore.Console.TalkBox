@@ -44,7 +44,7 @@ public class WhisperListenCommand : Command
 
         var quantizationTypeOption = new Option<QuantizationType>("--quantizationType")
         {
-            DefaultValueFactory = _ => QuantizationType.Q4_0,
+            DefaultValueFactory = _ => QuantizationType.NoQuantization,
             Description = "The whisper model quantization type to use."
         };
 
